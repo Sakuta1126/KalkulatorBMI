@@ -14,5 +14,25 @@ namespace KalkulatorBMI
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void obliczbmi_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnZapiszRezultat_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
