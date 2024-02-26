@@ -34,5 +34,10 @@ namespace KalkulatorBMI
         {
 
         }
+
+        private void ZapsianeNav_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
