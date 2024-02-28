@@ -17,6 +17,7 @@ namespace KalkulatorBMI
         public ZapisaneWyniki()
         {
             InitializeComponent();
+            Load();
         }
 
         public void Load()
@@ -30,7 +31,7 @@ namespace KalkulatorBMI
 
                 List<BMIwynik> results = JsonConvert.DeserializeObject<List<BMIwynik>>(text);
 
-               // listViewBMI.ItemsSource = results;
+              listViewBMI.ItemsSource = results;
             }
         }
 
@@ -50,7 +51,7 @@ namespace KalkulatorBMI
                     break;
                 }
             }
-            //listViewBMI.ItemsSource = results;
+            listViewBMI.ItemsSource = results;
             string savedresult = JsonConvert.SerializeObject(results);
             File.WriteAllText(path, savedresult);
 
