@@ -48,7 +48,7 @@
                                 <Label Text="Typ:"/>
                                 <Label Text="{Binding Result}"/>
                             </StackLayout>
-                            <Button Text="Usuń" Style="{DynamicResource Button_Delete}" x:Name="usun" Clicked="usun_Clicked"  BindingContext="{Binding .}"/>
+                            <Button Text="Usuń" Style="{DynamicResource Button_Delete}" x:Name="usun" Clicked="usun_Clicked"   BindingContext="{Binding .}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

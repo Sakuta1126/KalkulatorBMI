@@ -72,7 +72,7 @@
         <Button Text="Oblicz" x:Name="obliczbmi" Clicked="obliczbmi_Clicked"  Style="{DynamicResource Button_Calculate}"/>
         <Label x:Name="Wynik" FontSize="30" FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
         <Label x:Name="Rezultat" FontSize="25" FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-        <Button x:Name="BtnZapiszRezultat" Clicked="BtnZapiszRezultat_Clicked" Text="ZAPISZ" HorizontalOptions="Center" Margin="0,20,0,0" IsVisible="false" IsEnabled="False"/>
+        <Button x:Name="BtnZapiszRezultat" Clicked="BtnZapiszRezultat_Clicked" Text="ZAPISZ"  HorizontalOptions="Center" Margin="0,20,0,0" IsVisible="false" IsEnabled="False"/>
 
 
     </StackLayout>

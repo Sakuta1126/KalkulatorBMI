@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Shapes;
 
 namespace KalkulatorBMI
 {
@@ -91,7 +92,7 @@ namespace KalkulatorBMI
             tmp_weight = E_Weight.Text;
         
     }
-
+       
         private async void BtnZapiszRezultat_Clicked(object sender, EventArgs e)
         {
             string title = await DisplayPromptAsync("Tytuł", "Nadaj tytuł", "OK", "ANULUJ", "tytuł");
@@ -100,9 +101,9 @@ namespace KalkulatorBMI
                 await DisplayAlert("Błąd", "Podaj tytuł zapisu.", "OK");
                 return;
             }
-            string path = App.DbPath;
-            string file = File.ReadAllText(path);
-            List<BMIwynik> resultList = JsonConvert.DeserializeObject<List<BMIwynik>>(file);
+            //string path = App.DbPath;
+            //string file = ReadData();
+            List < BMIwynik > resultList = App.ReadData();
 
             if (resultList.Count > 0)
             {
@@ -110,16 +111,17 @@ namespace KalkulatorBMI
             }
 
             resultList.Add(new BMIwynik(title, DateTime.Now, int.Parse(tmp_height), int.Parse(tmp_weight), tmp_gender, float.Parse(tmp_score), tmp_result));
-
-            string serializedResultList = JsonConvert.SerializeObject(resultList);
-            File.WriteAllText(path, serializedResultList);
+            //WriteToFile(resultList);
+            //string serializedResultList = JsonConvert.SerializeObject(resultList);
+            App.WriteToFile(resultList);
 
             BtnZapiszRezultat.IsVisible = false;
             BtnZapiszRezultat.IsEnabled = false;
 
             await DisplayAlert("Informacja", "Pomyślnie dodano nowy zapis.", "OK");
-        }
 
+        }
+        
        
 
         private void ZapsianeNav_Clicked(object sender, EventArgs e)
